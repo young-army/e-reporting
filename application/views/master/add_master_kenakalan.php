@@ -48,7 +48,7 @@
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="<?php base_url();?>dashboard/" class="form-horizontal">
+                            <form action="<?php base_url();?>dashboard/project" class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label">Kenakalan</label>
                                 <div class="controls">
