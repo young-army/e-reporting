@@ -22,7 +22,7 @@
                            <span class="divider">/</span>
                        </li>
                        <li class="active">
-                           Tambah Data Naufal
+                           Tambah Data Siswa
                        </li>
                        <li class="pull-right search-wrap">
                            <form action="http://thevectorlab.net/metrolab/search_result.html" class="hidden-phone">
