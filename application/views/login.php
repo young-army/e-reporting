@@ -42,15 +42,11 @@
                     <hr>
                     <div class="login-form">
                         <!-- BEGIN ERROR BOX -->
-                        <div class="alert alert-danger hide">
-                            <button type="button" class="close" data-dismiss="alert">×</button>
-                            <h4>Error!</h4>
-                            Your Error Message goes here
-                        </div>
+                        <?php echo $error;?>
                         <!-- END ERROR BOX -->
-                        <form action="#" method="post">
-                            <input type="text" placeholder="Username" class="input-field form-control user" />
-                            <input type="password" placeholder="Password" class="input-field form-control password" />
+                        <form action="<?php echo base_url();?>login/auth" method="post">
+                            <input type="text" placeholder="Username" name="username" class="input-field form-control user" />
+                            <input type="password" placeholder="Password" name="password" class="input-field form-control password" />
                             <button type="submit" class="btn btn-login">Login</button>
                         </form>
                        

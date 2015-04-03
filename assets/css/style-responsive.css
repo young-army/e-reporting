@@ -383,7 +383,7 @@
 @media (max-width: 767px) {
 
     #header.navbar-inverse .navbar-inner {
-        height: 185px !important;
+        height: 60px !important;
     }
 
     #main-content {
@@ -801,7 +801,7 @@
     }
 
     #header.navbar-inverse .navbar-inner {
-        height: 185px !important;
+        height: 60px !important;
     }
 
     #main-content {
@@ -955,7 +955,7 @@
     }
 
     #header.navbar-inverse .navbar-inner {
-        height: 185px !important;
+        height: 60px !important;
     }
 
     #main-content {
@@ -1125,7 +1125,7 @@
     }
 
     #header.navbar-inverse .navbar-inner {
-        height: 185px !important;
+        height: 60px !important;
     }
 
     #main-content {

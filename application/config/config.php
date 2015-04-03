@@ -17,7 +17,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | environments.
 |
 */
-$config['base_url'] = 'http://192.168.43.226/projects/e-reporting/';
+//$config['base_url'] = 'http://192.168.43.226/projects/e-reporting/';
+$config['base_url'] = 'http://localhost/projects/e-reporting/';
 
 /*
 |--------------------------------------------------------------------------
@@ -305,7 +306,7 @@ $config['cache_query_string'] = FALSE;
 | http://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = '123456789';
 
 /*
 |--------------------------------------------------------------------------

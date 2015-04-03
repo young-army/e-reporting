@@ -484,13 +484,12 @@ a,a:focus, a:hover, a:active {
     margin-top: 10px;
     color: white;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    background-color: #e9ebec;
-    border-color: #caced1 #caced1 black;
-    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    background-color: #4A8BC2;
+    border: 1px solid rgba(0, 0, 0, 0.25)
 }
 
 #header.navbar-inverse .btn-navbar:hover {
-    background-color: #caced1;
+    background-color: #4A8BC2;
 }
 
 #header .navbar-inner {
