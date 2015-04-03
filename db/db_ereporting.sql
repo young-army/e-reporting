@@ -33,6 +33,19 @@ CREATE TABLE `tbl_karyawan` (
 
 insert  into `tbl_karyawan`(`id`,`nik`,`nama_karyawan`,`jabatan`) values (1,'1234567890','Fata Aisy Salim','Guru'),(2,'0987654321','Muhief Muhfianto','Wakasek'),(3,'123213213','Agus Hariyanto','Kepsek'),(4,'456745676','Naufal Islam','Ketua Yayasan');
 
+/*Table structure for table `tbl_kenakalan` */
+
+DROP TABLE IF EXISTS `tbl_kenakalan`;
+
+CREATE TABLE `tbl_kenakalan` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `kenakalan` varchar(100) DEFAULT NULL,
+  `poin` int(5) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+/*Data for the table `tbl_kenakalan` */
+
 /*Table structure for table `tbl_siswa` */
 
 DROP TABLE IF EXISTS `tbl_siswa`;
