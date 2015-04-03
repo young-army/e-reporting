@@ -44,7 +44,7 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Tambah Data Karyawan </h4>
-                            
+                            <?php echo ?>
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
