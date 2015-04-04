@@ -64,8 +64,8 @@
 							<div class="control-group">
                                 <label class="control-label">Jenis Kelamin</label>
                                 <div class="controls" style="text-align:left">
-                                    <input type="radio" name="jns_kel" style="margin-top:-3px"> Pria
-                                    <input type="radio" name="jns_kel" style="margin-top:-3px"> Wanita
+                                    <input type="radio" name="jns_kel" value="Pria" style="margin-top:-3px"> Pria
+                                    <input type="radio" name="jns_kel" value="Wanita" style="margin-top:-3px"> Wanita
                                 </div>
                             </div>
 							<div class="control-group">

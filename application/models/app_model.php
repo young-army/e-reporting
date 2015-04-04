@@ -6,7 +6,7 @@ class App_model extends CI_Model{
 		$check = $this->db->query("select tbl_user.*,tbl_karyawan.nik,tbl_karyawan.nama_karyawan,tbl_karyawan.jabatan from tbl_user join tbl_karyawan on tbl_user.nik = tbl_karyawan.nik where tbl_user.username='$user' and tbl_user.password='$pass'");
 		return $check;
 	}
-
+//MASTER_SISWA
 	function ambil_master_siswa(){
 		$hasil = $this->db->query("select * from tbl_siswa")->result();
 		return $hasil;
@@ -32,7 +32,7 @@ class App_model extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->delete('tbl_siswa');
 	}
-	
+//MASTER KARYAWAN	
 	function karyawan()
 	{
 		$query=$this->db->query("select * from tbl_karyawan")->result();

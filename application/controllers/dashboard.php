@@ -23,7 +23,9 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'setting/my_account';
 		$this->load->view('template',$data);
 	}
+	
 	// MASTER KARYAWAN
+	
 	function master_karyawan()
 	{	$data['karyawan'] = $this->app_model->karyawan();
 		$data['page'] = 'master/master_karyawan';
@@ -58,9 +60,6 @@ class Dashboard extends CI_Controller {
 	{
 		redirect('dashboard/master_karyawan');
 	}
-	
-
-
 
 	//MASTER SISWA
 
@@ -91,7 +90,9 @@ class Dashboard extends CI_Controller {
 		$this->app_model->delete_siswa($id);
 		redirect('dashboard/master_siswa');
 	}
+	
 	//MASTER KENAKALAN
+	
 	function master_kenakalan()
 	{
 		$data['page'] = 'master/master_kenakalan';
