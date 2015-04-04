@@ -25,21 +25,38 @@ class Dashboard extends CI_Controller {
 	}
 	
 	function master_karyawan()
-	{
+	{	$data['karyawan'] = $this->app_model->karyawan();
 		$data['page'] = 'master/master_karyawan';
 		$this->load->view('template_table',$data);
 	}
 	
 	function add_master_karyawan()
-	{
+	{	
 		$data['page'] = 'master/add_master_karyawan';
 		$this->load->view('template',$data);
+	
+	}
+	
+	function add_karyawan()
+	{	$this->app_model->simpan_data_karyawan();
+		redirect('dashboard/master_karyawan');
 	}
 	
 	function edit_master_karyawan()
 	{
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
+	}
+	
+	function delete_karyawan($id)
+	{
+		$this->app_model->delete($id);
+		redirect('dashboard/master_karyawan');
+	}
+	
+	function cancel()
+	{
+		redirect('dashboard/master_karyawan');
 	}
 	
 	function master_siswa()

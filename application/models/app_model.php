@@ -7,4 +7,29 @@ class App_model extends CI_Model{
 		return $check;
 	}
 	
+	function karyawan()
+	{
+		$query=$this->db->query("select * from tbl_karyawan")->result();
+		return $query;
+	}
+	
+	function simpan_data_karyawan()
+	{
+		$nik = $this->input->post('nik');
+		$nama = $this->input->post('karyawan');
+		$jabatan = $this->input->post('jabatan');
+		$data = array(
+		'nik' => $nik,
+		'nama_karyawan' => $nama,
+		'jabatan' => $jabatan
+		);
+		$this->db->insert('tbl_karyawan',$data);
+	}
+	
+	function delete($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('tbl_karyawan');
+	}
+	
 }
