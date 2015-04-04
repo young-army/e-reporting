@@ -43,7 +43,7 @@ class Dashboard extends CI_Controller {
 	}
 	
 	function edit_master_karyawan()
-	{
+	{	
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
 	}
