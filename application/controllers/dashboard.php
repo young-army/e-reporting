@@ -47,10 +47,7 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
 	}
-<<<<<<< HEAD
-	//MASTER SISWA
-=======
-	
+
 	function delete_karyawan($id)
 	{
 		$this->app_model->delete($id);
@@ -62,7 +59,7 @@ class Dashboard extends CI_Controller {
 		redirect('dashboard/master_karyawan');
 	}
 	
->>>>>>> 974090f3593f595a613d10756f0cfdfe9cc0586a
+	//MASTER SISWA
 	function master_siswa()
 	{
 		$data['master_siswa'] = $this->app_model->ambil_master_siswa();
@@ -71,14 +68,14 @@ class Dashboard extends CI_Controller {
 	}
 	
 	function add_master_siswa()
-	{
+	{	
 		$data['page'] = 'master/add_master_siswa';
 		$this->load->view('template',$data);
 	}
 
 	function add_siswa(){
 		$this->app_model->simpan_data_siswa();
-		header('location:'.base_url().'dashboard/master_siswa');
+		redirect('dashboard/master_siswa');
 	}
 	
 	function edit_master_siswa()
