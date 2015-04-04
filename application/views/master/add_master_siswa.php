@@ -44,7 +44,7 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Tambah Data Siswa </h4>
-                            <form action="<?php echo base_url();?>dashboard/add_siswa">
+                            <form method="post" action="<?php echo base_url();?>dashboard/add_siswa">
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
@@ -52,13 +52,13 @@
                             <div class="control-group">
                                 <label class="control-label">NIS</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " name="nis">
+                                    <input type="text" class="span6 " name="nis"/>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Siswa</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " name="nama">
+                                    <input type="text" class="span6 " name="nama"/>
                                 </div>
                             </div>
 							<div class="control-group">
@@ -71,18 +71,18 @@
 							<div class="control-group">
                                 <label class="control-label">Kelas</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " name="kelas">
+                                    <input type="text" class="span6 " name="kelas"/>
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jurusan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " name="jurusan">
+                                    <input type="text" class="span6 " name="jurusan"/>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Simpan</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <a href="<?php echo base_url();?>dashboard/master_siswa"><button type="button" class="btn">Cancel</button>
                             </div>
                             </form>
                             <!-- END FORM-->

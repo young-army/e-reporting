@@ -1,5 +1,5 @@
 <?php
-//ggggggg
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Dashboard extends CI_Controller {
@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'setting/my_account';
 		$this->load->view('template',$data);
 	}
-	// MASTER BKARYAWAN
+	// MASTER KARYAWAN
 	function master_karyawan()
 	{	$data['karyawan'] = $this->app_model->karyawan();
 		$data['page'] = 'master/master_karyawan';
@@ -48,9 +48,6 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 
-	//MASTER SISWA
-
-	
 	function delete_karyawan($id)
 	{
 		$this->app_model->delete($id);
@@ -63,6 +60,10 @@ class Dashboard extends CI_Controller {
 	}
 	
 
+
+
+	//MASTER SISWA
+
 	function master_siswa()
 	{
 		$data['master_siswa'] = $this->app_model->ambil_master_siswa();
@@ -71,20 +72,24 @@ class Dashboard extends CI_Controller {
 	}
 	
 	function add_master_siswa()
-	{
+	{	
 		$data['page'] = 'master/add_master_siswa';
 		$this->load->view('template',$data);
 	}
 
 	function add_siswa(){
 		$this->app_model->simpan_data_siswa();
-		header('location:'.base_url().'dashboard/master_siswa');
+		redirect('dashboard/master_siswa');
 	}
 	
 	function edit_master_siswa()
 	{
 		$data['page'] = 'master/edit_master_siswa';
 		$this->load->view('template',$data);
+	}
+	function delete_master_siswa($id){
+		$this->app_model->delete_siswa($id);
+		redirect('dashboard/master_siswa');
 	}
 	//MASTER KENAKALAN
 	function master_kenakalan()

@@ -28,7 +28,10 @@ class App_model extends CI_Model{
 		$this->db->insert('tbl_siswa',$data);
 		
 	}
-
+	function delete_siswa($id){
+		$this->db->where('id',$id);
+		$this->db->delete('tbl_siswa');
+	}
 	
 	function karyawan()
 	{
