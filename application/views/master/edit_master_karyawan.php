@@ -39,33 +39,35 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Karyawan </h4>
-                            
+							
                         </div>
-                        <div class="widget-body">
+						<div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
+							<form action="#" class="form-horizontal">
+							
                             <div class="control-group">
                                 <label class="control-label">NIK</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 "/>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Karyawan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 "/>
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jabatan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 "/>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Update</button>
                                 <button type="button" class="btn">Cancel</button>
                             </div>
+							
                             </form>
                             <!-- END FORM-->
                         </div>
