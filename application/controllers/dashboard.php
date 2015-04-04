@@ -23,7 +23,7 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'setting/my_account';
 		$this->load->view('template',$data);
 	}
-	
+	// MASTER BKARYAWAN
 	function master_karyawan()
 	{
 		$data['page'] = 'master/master_karyawan';
@@ -41,10 +41,11 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
 	}
-	
+	//MASTER SISWA
 	function master_siswa()
 	{
-		$data['page'] = 'master/master_siswa';
+		$data['master_siswa'] = $this->app_model->ambil_master_siswa();
+		$data['page'] = 'master/master_siswa';	
 		$this->load->view('template_table',$data);
 	}
 	
@@ -53,13 +54,18 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'master/add_master_siswa';
 		$this->load->view('template',$data);
 	}
+
+	function add_siswa(){
+		$this->app_model->simpan_data_siswa();
+		header('location:'.base_url().'dashboard/master_siswa');
+	}
 	
 	function edit_master_siswa()
 	{
 		$data['page'] = 'master/edit_master_siswa';
 		$this->load->view('template',$data);
 	}
-	
+	//MASTER KENAKALAN
 	function master_kenakalan()
 	{
 		$data['page'] = 'master/master_kenakalan';

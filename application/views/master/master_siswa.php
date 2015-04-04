@@ -54,21 +54,25 @@
                                 <th class="hidden-phone">Kelas</th>
                                 <th class="hidden-phone">Jurusan</th>
                                 <th class="hidden-phone">Fungsi</th>
+								
                             </tr>
                             </thead>
                             <tbody>
+							<?php $no=1;
+								foreach ($master_siswa as $row){?>
                             <tr class="odd gradeX">
-                                <td>1</td>
-                                <td>1234567890</td>
-                                <td class="hidden-phone">Fata Aisy Salim</td>
-                                <td class="hidden-phone">Pria</td>
-                                <td class="hidden-phone">3A</td>
-                                <td class="hidden-phone">IPA</td>
+                                <td><?php echo $no;?></td>
+                                <td><?php echo $row->nis;?></td>
+                                <td class="hidden-phone"><?php echo $row->nama_siswa;?></td>
+                                <td class="hidden-phone"><?php echo $row->jns_kel;?></td>
+                                <td class="hidden-phone"><?php echo $row->kelas;?></td>
+                                <td class="hidden-phone"><?php echo $row->jurusan;?></td>
                                 <td class="hidden-phone">
 								<a href="<?php echo base_url();?>dashboard/edit_master_siswa"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
                                 <button class="btn btn-small btn-danger"><i class="icon-remove icon-white"></i> Delete</button></td>
                             </tr>
                             </tbody>
+								<?php $no++;} ?>
                         </table>
                     </div>
                 </div>
