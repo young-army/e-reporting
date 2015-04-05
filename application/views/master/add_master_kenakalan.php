@@ -48,17 +48,17 @@
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="<?php base_url();?>dashboard/project" class="form-horizontal">
+                            <form method="post" action="<?php echo base_url();?>dashboard/project" class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label">Kenakalan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6" name="kenakalan">
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Poin Kenakalan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6" name="poin">
                                 </div>
                             </div>
                             <div class="form-actions">

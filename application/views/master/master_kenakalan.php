@@ -51,17 +51,21 @@
                                 <th class="hidden-phone">Kenakalan</th>
                                 <th class="hidden-phone">Poin Kenakalan</th>
                                 <th class="hidden-phone">Fungsi</th>
-                            </tr>
+                            </tr>							
                             </thead>
                             <tbody>
+							
+							<?php $no = 1; foreach($kenakalan as $row){?>
+							
                             <tr class="odd gradeX">
-                                <td>1</td>
-                                <td class="hidden-phone">Mencuri</td>
-                                <td class="hidden-phone">100</td>
-                                <td class="hidden-phone">
+                                <td><?php echo $no;?></td>
+                                <td class="hidden-phone"><?php echo $row->kenakalan;?></td>
+                                <td class="hidden-phone"><?php echo $row->poin;?></td>																																					
+								<td>
 								<a href="<?php echo base_url();?>dashboard/edit_master_kenakalan"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
-                                <button class="btn btn-small btn-danger"><i class="icon-remove icon-white"></i> Delete</button></td>
-                            </tr>
+								<a href="<?php echo base_url();?>dashboard/delete_master_kenakalan/<?php echo $row->id;?>"><button class="btn btn-small btn-danger"><i class="icon-remove icon-white"></i> Delete</button></a></td>                            							
+							</tr>
+							<?php $no++; } ?>
                             </tbody>
                         </table>
                     </div>
