@@ -32,6 +32,21 @@ class App_model extends CI_Model{
 		$this->db->where('id',$id);
 		$this->db->delete('tbl_siswa');
 	}
+	function update_master_siswa($id){
+		$nis = $this->input->post('nis');
+		$nama = $this->input->post('nama');
+		$jns_kel = $this->input->post('jns_kel');
+		$kelas = $this->input->post('kelas');
+		$jurusan = $this->input->post('jurusan');
+		
+		$this->db->query("update tbl_siswa set nis='$nis',nama_siswa='$nama',jns_kel='$jns_kel',kelas='$kelas',jurusan='$jurusan' where id='$id'");
+		
+	}
+	function edit_master_siswa($id){
+		$hasil = $this->db->query("select * from tbl_siswa where id='$id'")->row($id);
+		return $hasil;
+	}
+
 //MASTER KARYAWAN	
 	function karyawan()
 	{

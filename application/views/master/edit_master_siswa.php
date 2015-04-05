@@ -44,7 +44,8 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Siswa </h4>
-                            
+                         <form method="post" action="<?php echo base_url();?>dashboard/update_master_siswa">   
+						 <input type="hidden" name="id" value="<?php echo $master_siswa->id;?>">
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
@@ -52,41 +53,42 @@
                             <div class="control-group">
                                 <label class="control-label">NIS</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="nis" value="<?php echo $master_siswa->nis;?>"/>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Siswa</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="nama" value="<?php echo $master_siswa->nama_siswa;?>"/>
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jenis Kelamin</label>
                                 <div class="controls" style="text-align:left">
-                                    <input type="radio" name="jns_kel" style="margin-top:-3px"/> Pria
-                                    <input type="radio" name="jns_kel" style="margin-top:-3px"/> Wanita
+                                    <input type="radio" name="jns_kel" value="<?php echo $master_siswa->jns_kel;?>" style="margin-top:-3px"/> Pria
+                                    <input type="radio" name="jns_kel" value="<?php echo $master_siswa->jns_kel;?>" style="margin-top:-3px"/> Wanita
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Kelas</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="kelas" value="<?php echo $master_siswa->kelas;?>" />
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jurusan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="jurusan" value="<?php echo $master_siswa->jurusan;?>"/>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Update</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <a href="<?php echo base_url();?>dashboard/master_siswa"><button type="button" class="btn">Cancel</button>
                             </div>
                             </form>
                             <!-- END FORM-->
                         </div>
+						</form>
                     </div>
                 <!-- END EXAMPLE TABLE widget-->
                 </div>

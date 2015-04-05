@@ -67,7 +67,7 @@
                                 <td class="hidden-phone"><?php echo $row->kelas;?></td>
                                 <td class="hidden-phone"><?php echo $row->jurusan;?></td>
                                 <td class="hidden-phone">
-								<a href="<?php echo base_url();?>dashboard/edit_master_siswa"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
+								<a href="<?php echo base_url();?>dashboard/edit_master_siswa/<?php echo $row->id;?>"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
                                 <a href="<?php echo base_url();?>dashboard/delete_master_siswa/<?php echo $row->id;?>"onclick="return confirm('Apakah Anda Yakin?')"><button class="btn btn-small btn-danger"><i class="icon-remove icon-white"></i> Delete</button></td>
                             </tr>
 							<?php $no++;} ?>

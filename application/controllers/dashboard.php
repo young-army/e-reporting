@@ -81,10 +81,16 @@ class Dashboard extends CI_Controller {
 		redirect('dashboard/master_siswa');
 	}
 	
-	function edit_master_siswa()
+	function edit_master_siswa($id)
 	{
+		$data['master_siswa'] = $this->app_model->edit_master_siswa($id);
 		$data['page'] = 'master/edit_master_siswa';
 		$this->load->view('template',$data);
+	}	
+	function update_master_siswa($id){
+		$id = $this->input->post('id');
+		$this->app_model->update_master_siswa($id);
+		redirect('dashboard/master_siswa');
 	}
 	function delete_master_siswa($id){
 		$this->app_model->delete_siswa($id);
