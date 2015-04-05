@@ -10,11 +10,11 @@
                    </h3>
                    <ul class="breadcrumb">
                        <li>
-                           <a href="#">Dashboard</a>
+                           <a href="<?php echo base_url();?>dashboard">Dashboard</a>
                            <span class="divider">/</span>
                        </li>
                        <li>
-                           <a href="#">Master Data</a>
+                           <a href="<?php echo base_url();?>dashboard">Master Data</a>
                            <span class="divider">/</span>
                        </li>
                        <li class="active">
