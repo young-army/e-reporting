@@ -6,7 +6,7 @@ class App_model extends CI_Model{
 		$check = $this->db->query("select tbl_user.*,tbl_karyawan.nik,tbl_karyawan.nama_karyawan,tbl_karyawan.jabatan from tbl_user join tbl_karyawan on tbl_user.nik = tbl_karyawan.nik where tbl_user.username='$user' and tbl_user.password='$pass'");
 		return $check;
 	}
-
+//MASTER_SISWA
 	function ambil_master_siswa(){
 		$hasil = $this->db->query("select * from tbl_siswa")->result();
 		return $hasil;
@@ -28,8 +28,26 @@ class App_model extends CI_Model{
 		$this->db->insert('tbl_siswa',$data);
 		
 	}
+	function delete_siswa($id){
+		$this->db->where('id',$id);
+		$this->db->delete('tbl_siswa');
+	}
+	function update_master_siswa($id){
+		$nis = $this->input->post('nis');
+		$nama = $this->input->post('nama');
+		$jns_kel = $this->input->post('jns_kel');
+		$kelas = $this->input->post('kelas');
+		$jurusan = $this->input->post('jurusan');
+		
+		$this->db->query("update tbl_siswa set nis='$nis',nama_siswa='$nama',jns_kel='$jns_kel',kelas='$kelas',jurusan='$jurusan' where id='$id'");
+		
+	}
+	function edit_master_siswa($id){
+		$hasil = $this->db->query("select * from tbl_siswa where id='$id'")->row($id);
+		return $hasil;
+	}
 
-	
+//MASTER KARYAWAN	
 	function karyawan()
 	{
 		$query=$this->db->query("select * from tbl_karyawan")->result();

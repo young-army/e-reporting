@@ -64,8 +64,8 @@
 							<div class="control-group">
                                 <label class="control-label">Jenis Kelamin</label>
                                 <div class="controls" style="text-align:left">
-                                    <input type="radio" name="jns_kel" style="margin-top:-3px"> Pria
-                                    <input type="radio"  style="margin-top:-3px"> Wanita
+                                    <input type="radio" name="jns_kel" value="Pria" style="margin-top:-3px"> Pria
+                                    <input type="radio" name="jns_kel" value="Wanita" style="margin-top:-3px"> Wanita
                                 </div>
                             </div>
 							<div class="control-group">
@@ -82,7 +82,7 @@
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Simpan</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <a href="<?php echo base_url();?>dashboard/master_siswa"><button type="button" class="btn">Cancel</button>
                             </div>
                             </form>
                             <!-- END FORM-->
