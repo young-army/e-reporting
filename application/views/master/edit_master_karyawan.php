@@ -39,11 +39,9 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Karyawan </h4>
-							
 							<form method="post" action="<?php echo base_url();?>dashboard/update_master_karyawan">
 							<input type="hidden" name="id" value="<?php echo $master_karyawan->id;?>">
-							
-                        </div>
+						</div>
 						<div class="widget-body">
                             <!-- BEGIN FORM-->
 							<form action="#" class="form-horizontal">

@@ -55,14 +55,14 @@
                             </tr>
                             </thead>
                             <tbody>
-							<?php  $no = 1; foreach($karyawan as $row){?>
+							<?php  $no = 1; foreach($master_karyawan as $row){?>
                             <tr class="odd gradeX">
                                 <td><?php echo $no;?></td>
                                 <td><?php echo $row->nik;?></td>
                                 <td class="hidden-phone"><?php echo $row->nama_karyawan;?></td>
                                 <td class="hidden-phone"><?php echo $row->jabatan;?></td>
                                 <td class="hidden-phone">
-								<a href="<?php echo base_url();?>dashboard/edit_master_karyawan"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
+								<a href="<?php echo base_url();?>dashboard/edit_master_karyawan/<?php echo $row->id;?>"><button class="btn btn-small btn-primary"><i class="icon-pencil icon-white"></i> Edit</button></a>
                                 <a href="<?php echo base_url();?>dashboard/delete_karyawan/<?php echo $row->id;?>"onclick="return confirm('Apakah Anda Yakin?')"><button class="btn btn-small btn-danger"><i class="icon-remove icon-white"></i> Delete</button></a></td>
                             </tr>
 							<?php $no++;}?>

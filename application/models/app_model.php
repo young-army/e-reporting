@@ -73,7 +73,7 @@ class App_model extends CI_Model{
 		$this->db->delete('tbl_karyawan');
 	}
 	
-	function ambil_karyawan($id)
+	function edit_master_karyawan($id)
 	{
 		$query = $this->db->query("select * from tbl_karyawan where id='$id'")->row($id);
 		return $query;

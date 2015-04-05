@@ -27,7 +27,7 @@ class Dashboard extends CI_Controller {
 	// MASTER KARYAWAN
 	
 	function master_karyawan()
-	{	$data['karyawan'] = $this->app_model->karyawan();
+	{	$data['master_karyawan'] = $this->app_model->karyawan();
 		$data['page'] = 'master/master_karyawan';
 		$this->load->view('template_table',$data);
 	}
@@ -45,7 +45,8 @@ class Dashboard extends CI_Controller {
 	}
 	
 	function edit_master_karyawan($id)
-	{	$data['master_karyawan'] = $this->app_model->ambil_karyawan($id);
+	{	
+		$data['master_karyawan'] = $this->app_model->edit_master_karyawan($id);
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
 	}
@@ -54,7 +55,7 @@ class Dashboard extends CI_Controller {
 	{
 		$id = $this->input->post('id');
 		$this->app_model->update_master_karyawan($id);
-		redirect('dashboard/master_siswa');
+		redirect('dashboard/master_karyawan');
 	}
 
 	function delete_karyawan($id)
