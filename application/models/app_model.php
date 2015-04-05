@@ -55,5 +55,20 @@ class App_model extends CI_Model{
 		$this->db->delete('tbl_karyawan');
 	}
 	
+	function ambil_karyawan($id)
+	{
+		$query = $this->db->query("select * from tbl_karyawan where id='$id'")->row($id);
+		return $query;
+	}
+	
+	function update_master_karyawan($id)
+	{
+	$nik = $this->input->post('nik');
+	$nama = $this->input->post('nama');
+	$jbt = $this->input->post('jabatan');
+	
+	$this->db->query("update tbl_karyawan set nik='$nik',nama_karyawan='$nama',jabatan='$jbt' where id='$id'");
+	}
+	
 
 }

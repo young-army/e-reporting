@@ -42,10 +42,17 @@ class Dashboard extends CI_Controller {
 		redirect('dashboard/master_karyawan');
 	}
 	
-	function edit_master_karyawan()
-	{	
+	function edit_master_karyawan($id)
+	{	$data['master_karyawan'] = $this->app_model->ambil_karyawan($id);
 		$data['page'] = 'master/edit_master_karyawan';
 		$this->load->view('template',$data);
+	}
+	
+	function update_master_karyawan($id)
+	{
+		$id = $this->input->post('id');
+		$this->app_model->update_master_karyawan($id);
+		redirect('dashboard/master_siswa');
 	}
 
 	function delete_karyawan($id)
