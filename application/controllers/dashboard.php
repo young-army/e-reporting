@@ -17,23 +17,6 @@ class Dashboard extends CI_Controller {
 		$data['page']   = 'welcome';
 		$this->load->view('template',$data);
 
-		// load view yang akan digenerate atau diconvert
-		// contoh kita akan membuat pdf dari halaman welcome codeigniter
-		$this->load->view('welcome_message');
-		// dapatkan output html
-		
-		$html = $this->output->get_output();
-		
-		// Load/panggil library dompdfnya
-		$this->load->library('dompdf_gen');
-		
-		// Convert to PDF
-		$this->dompdf->load_html($html);
-		$this->dompdf->render();
-		//utk menampilkan preview pdf
-		$this->dompdf->stream("welcome.pdf",array('Attachment'=>0));
-		//atau jika tidak ingin menampilkan (tanpa) preview di halaman browser
-		//$this->dompdf->stream("welcome.pdf");
 		
 	
 	}
@@ -71,7 +54,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 	
-	function update_master_karyawan($id)
+	function update_master_karyawan()
 	{
 		$id = $this->input->post('id');
 		$this->app_model->update_master_karyawan($id);
@@ -115,7 +98,7 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'master/edit_master_siswa';
 		$this->load->view('template',$data);
 	}	
-	function update_master_siswa($id){
+	function update_master_siswa(){
 		$id = $this->input->post('id');
 		$this->app_model->update_master_siswa($id);
 		redirect('dashboard/master_siswa');

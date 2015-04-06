@@ -94,7 +94,7 @@ class App_model extends CI_Model{
 		$this->db->insert('tbl_karyawan',$data);
 	}
 	
-<<<<<<< HEAD
+
 	/*function ambil_master_kenakalan($id_master_kenakalan){
 	$mast = $this->db->query("select * from tbl_kenakalan where id='$id_master_kenakalan'")->row();
 	return $mast;
@@ -102,20 +102,19 @@ class App_model extends CI_Model{
 	
 	function simpan_master_kenakalan(){
 		$kenakalan = $this->input->post('kenakalan');
-		$poin = $this->input->post('poinkenakalan');
+		$poin = $this->input->post('poin');
 		$data = array(
 		'kenakalan' => $kenakalan,
-		'poin_kenakalan' => $poin
+		'poin' => $poin
 		);
 		$this->db->update('tbl_kenakalan',$data);
 		//$this->db->query("update tbl_kenakalan set kenakalan='$kenakalan', poin_kenakalan='$poin' where id='$ubah'");
 	}
 	
 	
-}
 
 
-=======
+
 	function delete($id)
 	{
 		$this->db->where('id',$id);
@@ -139,4 +138,3 @@ class App_model extends CI_Model{
 	
 
 }
->>>>>>> acec337d3b016c8001faea519c14daeea69ea373
