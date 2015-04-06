@@ -39,33 +39,35 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Karyawan </h4>
-                            
-                        </div>
-                        <div class="widget-body">
+							<form method="post" action="<?php echo base_url();?>dashboard/update_master_karyawan">
+							<input type="hidden" name="id" value="<?php echo $master_karyawan->id;?>">
+						</div>
+						<div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
-                            <div class="control-group">
+							<form action="#" class="form-horizontal">
+							<div class="control-group">
                                 <label class="control-label">NIK</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6" name="nik" value="<?php echo $master_karyawan->nik;?>"/>
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Karyawan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6" name="nama" value="<?php echo $master_karyawan->nama_karyawan;?>"/>
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jabatan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6" name="jabatan" value="<?php echo $master_karyawan->jabatan;?>"/>
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Update</button>
                                 <button type="button" class="btn">Cancel</button>
                             </div>
+							
                             </form>
                             <!-- END FORM-->
                         </div>

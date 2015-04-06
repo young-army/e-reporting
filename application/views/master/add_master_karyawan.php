@@ -44,7 +44,11 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Tambah Data Karyawan </h4>
-                            
+
+                          
+
+                            <form method="post" action="<?php echo base_url()?>dashboard/add_karyawan">
+
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
@@ -52,24 +56,24 @@
                             <div class="control-group">
                                 <label class="control-label">NIK</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="nik" />
                                 </div>
                             </div>
                             <div class="control-group">
                                 <label class="control-label">Nama Karyawan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="karyawan" />
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Jabatan</label>
                                 <div class="controls">
-                                    <input type="text" class="span6 " />
+                                    <input type="text" class="span6 " name="jabatan" />
                                 </div>
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Simpan</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <a href="<?php echo base_url();?>dashboard/cancel"><button type="button" class="btn">Cancel</button></a>
                             </div>
                             </form>
                             <!-- END FORM-->
