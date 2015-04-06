@@ -44,12 +44,13 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Siswa </h4>
-                         <form method="post" action="<?php echo base_url();?>dashboard/update_master_siswa">   
-						 <input type="hidden" name="id" value="<?php echo $master_siswa->id;?>">
+                          
+						 
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
+                            <form method="post" action="<?php echo base_url();?>dashboard/update_master_siswa" class="form-horizontal"> 
+							<input type="hidden" name="id" value="<?php echo $master_siswa->id;?>">							
                             <div class="control-group">
                                 <label class="control-label">NIS</label>
                                 <div class="controls">
@@ -65,8 +66,8 @@
 							<div class="control-group">
                                 <label class="control-label">Jenis Kelamin</label>
                                 <div class="controls" style="text-align:left">
-                                    <input type="radio" name="jns_kel" value="<?php echo $master_siswa->jns_kel;?>" style="margin-top:-3px"/> Pria
-                                    <input type="radio" name="jns_kel" value="<?php echo $master_siswa->jns_kel;?>" style="margin-top:-3px"/> Wanita
+                                    <input type="radio" name="jns_kel" value="Pria" style="margin-top:-3px"/> Pria
+                                    <input type="radio" name="jns_kel" value="Wanita" style="margin-top:-3px"/> Wanita
                                 </div>
                             </div>
 							<div class="control-group">

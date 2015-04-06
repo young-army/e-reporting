@@ -16,6 +16,9 @@ class Dashboard extends CI_Controller {
 	{
 		$data['page']   = 'welcome';
 		$this->load->view('template',$data);
+
+		
+	
 	}
 	
 	function my_account()
@@ -51,7 +54,7 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 	
-	function update_master_karyawan($id)
+	function update_master_karyawan()
 	{
 		$id = $this->input->post('id');
 		$this->app_model->update_master_karyawan($id);
@@ -95,7 +98,7 @@ class Dashboard extends CI_Controller {
 		$data['page'] = 'master/edit_master_siswa';
 		$this->load->view('template',$data);
 	}	
-	function update_master_siswa($id){
+	function update_master_siswa(){
 		$id = $this->input->post('id');
 		$this->app_model->update_master_siswa($id);
 		redirect('dashboard/master_siswa');

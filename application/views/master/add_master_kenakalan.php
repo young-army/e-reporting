@@ -28,7 +28,7 @@
                            <form action="http://thevectorlab.net/metrolab/search_result.html" class="hidden-phone">
                                <div class="input-append search-input-area">
                                    <input class="" id="appendedInputButton" type="text">
-                                   <button class="btn" type="button"><i class="icon-search"></i> </button>
+                                   <button class="btn" type="button"><i class="icon-search"></i></button>
                                </div>
                            </form>
                        </li>

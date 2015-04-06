@@ -44,15 +44,11 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Tambah Data Karyawan </h4>
-
-                          
-
-                            <form method="post" action="<?php echo base_url()?>dashboard/add_karyawan">
-
-                        </div>
+							
+						</div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
+                            <form method="post" action="<?php echo base_url();?>dashboard/add_karyawan" class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label">NIK</label>
                                 <div class="controls">

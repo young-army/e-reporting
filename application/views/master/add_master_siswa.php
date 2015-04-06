@@ -44,11 +44,11 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Tambah Data Siswa </h4>
-                            <form method="post" action="<?php echo base_url();?>dashboard/add_siswa">
+                            
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form action="#" class="form-horizontal">
+                           <form method="post" action="<?php echo base_url();?>dashboard/add_siswa" class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label">NIS</label>
                                 <div class="controls">
@@ -87,7 +87,7 @@
                             </form>
                             <!-- END FORM-->
                         </div>
-						</form>
+						
                     </div>
                 <!-- END EXAMPLE TABLE widget-->
                 </div>

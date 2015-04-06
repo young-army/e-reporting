@@ -39,12 +39,13 @@
                 <div class="widget green">
                         <div class="widget-title">
                             <h4><i class="icon-reorder"></i> Edit Data Karyawan </h4>
-							<form method="post" action="<?php echo base_url();?>dashboard/update_master_karyawan">
-							<input type="hidden" name="id" value="<?php echo $master_karyawan->id;?>">
+							
+							
 						</div>
 						<div class="widget-body">
                             <!-- BEGIN FORM-->
-							<form action="#" class="form-horizontal">
+						<form method="post" action="<?php echo base_url();?>dashboard/update_master_karyawan" class="form-horizontal">
+						<input type="hidden" name="id" value="<?php echo $master_karyawan->id;?>">
 							<div class="control-group">
                                 <label class="control-label">NIK</label>
                                 <div class="controls">
@@ -65,7 +66,7 @@
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Update</button>
-                                <button type="button" class="btn">Cancel</button>
+                                <a href="<?php echo base_url();?>dashboard/master_karyawan"><button type="button" class="btn">Cancel</button>
                             </div>
 							
                             </form>
