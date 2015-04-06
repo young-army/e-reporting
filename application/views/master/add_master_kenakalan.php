@@ -48,7 +48,7 @@
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->
-                            <form method="post" action="<?php echo base_url();?>dashboard/project" class="form-horizontal">
+                            <form method="post" action="<?php echo base_url();?>dashboard/tambah_kenakalan" class="form-horizontal">
                             <div class="control-group">
                                 <label class="control-label">Kenakalan</label>
                                 <div class="controls">
@@ -63,6 +63,7 @@
                             </div>
                             <div class="form-actions">
                                 <button type="submit" class="btn btn-success">Simpan</button>
+								<a href="<?php echo base_url();?>dashboard/master_kenakalan">
                                 <button type="button" class="btn">Cancel</button>
                             </div>
                             </form>

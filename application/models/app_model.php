@@ -94,28 +94,48 @@ class App_model extends CI_Model{
 		$this->db->insert('tbl_karyawan',$data);
 	}
 	
-<<<<<<< HEAD
-	/*function ambil_master_kenakalan($id_master_kenakalan){
-	$mast = $this->db->query("select * from tbl_kenakalan where id='$id_master_kenakalan'")->row();
-	return $mast;
-	}*/
-	
-	function simpan_master_kenakalan(){
-		$kenakalan = $this->input->post('kenakalan');
-		$poin = $this->input->post('poinkenakalan');
-		$data = array(
-		'kenakalan' => $kenakalan,
-		'poin_kenakalan' => $poin
-		);
-		$this->db->update('tbl_kenakalan',$data);
-		//$this->db->query("update tbl_kenakalan set kenakalan='$kenakalan', poin_kenakalan='$poin' where id='$ubah'");
+//master kenakalan//
+	function data_kenakalan()
+	{
+		$tampil = $this->db->query("select * from tbl_kenakalan")->result();
+		return $tampil;
 	}
 	
+	function tambah_master_kenakalan()
+	{
+		$nakal = $this->input->post('kenakalan');
+		$poin = $this->input->post('poin');
+		$data = array(
+		'kenakalan' => $nakal,
+		'poin' => $poin
+		);
+		$this->db->insert('tbl_kenakalan',$data);
+	}
 	
-}
-
-
-=======
+	function ubah_master_kenakalan($id)
+	{
+		$ed = $this->db->query("select * from tbl_kenakalan where id='$id'")->row($id);
+		return $ed;
+	}
+	
+	function simpan_master_kenakalan($id){
+		$kenakalan = $this->input->post('kenakalan');
+		$poin = $this->input->post('poin');
+		$data = array(
+		'kenakalan' => $kenakalan,
+		'poin' => $poin
+		);
+		//$this->db->update('tbl_kenakalan',$data);
+		$this->db->query("update tbl_kenakalan set kenakalan='$kenakalan', poin='$poin' where id='$id'");
+	}
+	
+	function hapus_master_kenakalan($id)
+	{
+		$this->db->where('id',$id);
+		$this->db->delete('tbl_kenakalan');
+	}
+	
+	//=========
 	function delete($id)
 	{
 		$this->db->where('id',$id);
@@ -139,4 +159,3 @@ class App_model extends CI_Model{
 	
 
 }
->>>>>>> acec337d3b016c8001faea519c14daeea69ea373

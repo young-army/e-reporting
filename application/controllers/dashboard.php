@@ -109,7 +109,7 @@ class Dashboard extends CI_Controller {
 	
 	function master_kenakalan()
 	{
-		$data['kenakalan'] = $this->app_model->tampilan_kenakalan();
+		$data['kenakalan'] = $this->app_model->data_kenakalan();
 		$data['page'] = 'master/master_kenakalan';
 		$this->load->view('template_table',$data);
 	}
@@ -120,46 +120,33 @@ class Dashboard extends CI_Controller {
 		$this->load->view('template',$data);
 	}
 	
-	function project()
+	function tambah_kenakalan()
 	{
-		$this->app_model->add_master_kenakalan();
+		$this->app_model->tambah_master_kenakalan();
 		//redirect ('dashboard/master_kenakalan');
 		header ('location:'.base_url().'dashboard/master_kenakalan');		
 	}
 	
-	function edit_master_kenakalan()
+	function edit_master_kenakalan($id)
 	{
 		$data['page'] = 'master/edit_master_kenakalan';
-		//$data['data_kenakalan'] = $this->app_model->ubah_master_kenakalan;
-		//$this->load->view('edit_master_kenakalan',$data);
-		$this->load->view('template',$data);		
-		//data['kenakalan'] = $this->app_model->ambil_master_kenakalan($you);
-		//$oye['kenakalan'] = $this->app_model->ubah_master_kenakalan;
-		//redirect ('dashboard/master_kenakalan');
-		//header('location:'.base_url().'dashboard/master_kenakalan');
+		$data['master_kenakalan'] = $this->app_model->ubah_master_kenakalan($id);
+		$this->load->view('template',$data);
 	}
 	
-	function simpan_master_kenakalan($id){
+	function simpan_master_kenakalan($id)
+	{
 		$id=$this->input->post('id');
-		$this->app_model->ubah_master_kenakalan($id);
+		$this->app_model->simpan_master_kenakalan($id);
 		header('location:'.base_url().'dashboard/master_kenakalan');
 	}
 	
-	/*function edit_master_kenakalan()
+	function delete_master_kenakalan($id)
 	{
-		$data['page'] = 'master/edit_master_kenakalan';
-		$this->load->view('template',$data);
-		$this->app_model->edit_master_kenakalan();
-	}*/
-	
-	
-	
-	function ubah_master_kenakalan()
-	{
-		$this->app_model->edit_master_kenakalan();
-		//redirect ('dashboard/master_kenakalan');
-		header ('location:'.base_url().'dashboard/master_kenakalan');		
+		$this->app_model->hapus_master_kenakalan($id);
+		redirect ('dashboard/master_kenakalan');
 	}
+	
 }
 
 

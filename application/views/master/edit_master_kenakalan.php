@@ -48,17 +48,18 @@
                         </div>
                         <div class="widget-body">
                             <!-- BEGIN FORM-->							
-                            <form method="post" action="<?php echo base_url();?>dashboard/master_kenakalan" class="form-horizontal">
+                            <form method="post" action="<?php echo base_url();?>dashboard/simpan_master_kenakalan" class="form-horizontal">
+							<input type="hidden" name="id" value="<?php echo $master_kenakalan->id;?>">
                             <div class="control-group">
                                 <label class="control-label">Kenakalan</label>
                                 <div class="controls">
-									<input type="text" class="span6 " name="kenakalan" value="<?php echo $data_kenakalan->kenakalan;?>">
+									<input type="text" class="span6 " name="kenakalan" value="<?php echo $master_kenakalan->kenakalan;?>"/>
                                 </div>
                             </div>
 							<div class="control-group">
                                 <label class="control-label">Poin Kenakalan</label>
                                 <div class="controls">
-									<input type="text" class="span6 " name="poin" value="<?php echo $poin_kenakalan->poin kenakalan;?>">
+									<input type="text" class="span6 " name="poin" value="<?php echo $master_kenakalan->poin;?>"/>
                                 </div>
                             </div>
                             <div class="form-actions">
